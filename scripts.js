@@ -6,23 +6,39 @@ document.addEventListener('DOMContentLoaded', function() {
     const data = [
         {
             Task: 'Central Europe',
-            Start: '2025-04-15 7:00:00',
-            Finish: '2025-04-15 15:00:00'
+            Start: '2025-04-15 10:00:00',
+            Finish: '2025-04-15 15:00:00',
+            Color: 'blue',
         },
         {
             Task: 'America/Eastern',
             Start: '2025-04-15 13:00:00',
-            Finish: '2025-04-15 21:00:00'
+            Finish: '2025-04-15 21:00:00',
+            Color: 'orange',
         },
         {
             Task: 'America/Pacific',
             Start: '2025-04-15 16:00:00',
-            Finish: '2025-04-16 00:00:00'
+            Finish: '2025-04-16 01:00:00',
+            Color: 'green',
         },
         {
             Task: 'Asia/Pacific',
             Start: '2025-04-15 23:00:00',
-            Finish: '2025-04-16 8:00:00'
+            Finish: '2025-04-16 8:00:00',
+            Color: 'red',
+        },
+        {
+            Task: 'Asia/Pacific',
+            Start: '2025-04-16 6:00:00',
+            Finish: '2025-04-16 8:00:00',
+            Color: 'red',
+        },
+        {
+            Task: 'Central Europe',
+            Start: '2025-04-16 6:00:00',
+            Finish: '2025-04-16 10:00:00',
+            Color: 'blue',
         },
     ];
 
@@ -30,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         x: [d.Start, d.Finish],
         y: [d.Task, d.Task],
         type: 'scatter',
-        line: { width: 20},
+        line: { width: 20, color: d.Color},
         //mode: 'lines',
         marker: {},
         label: d.Task,
