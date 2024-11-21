@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLXN Symposium</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="scripts.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- NIST Footer -->
+   <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
+   <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"></script>
+
+    <!-- NIST Leave Notice -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://pages.nist.gov/leaveNotice/js/jquery.leaveNotice-nist.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://pages.nist.gov/leaveNotice/css/jquery.leaveNotice.css" />
+
+    <script type="text/javascript">
+        $(function(){
+        	$('a[rel=external]').leaveNotice();
+        });
+    </script>
+
+
+</head>
+<body>
+
+    <div class="alert alert-warning text-center mb-0" role="alert">
+        This website is in development. All details are subject to change.
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero d-flex flex-column justify-content-center align-items-center text-center">
+        <div class="container text-white py-5">
+            <h1 class="display-4 fw-bold">MLXN Symposium: <br/> Machine Learning for X-ray and Neutron Scattering</h1>
+            <p class="lead">A Global 24-Hour Virtual Symposium</p>
+            <p class="lead">Starting April 15th 10:00:00 UTC</p>
+            <div class="d-flex justify-content-center mt-4">
+                <button class="btn btn-primary btn-lg me-3" id="saveDate" rel="external">Save the Date</button>
+            </div>
+                <button class="btn btn-primary btn-lg mt-3" id="notifyMe">Notify Me When Submissions Open</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>About the Event</h2>
+            <p class="mt-3">
+                This virtual symposium brings together researchers, practitioners, and enthusiasts 
+                to explore the transformative power of machine learning in X-ray and neutron scattering. 
+                Building on the success of in-person workshops at Lawrence Berkeley National Lab (2023) 
+                and Technische Universität München (2024), we have decided to take this event virtual to reach a global audience.
+            </p>
+            <p class="mt-3">Join for the full 24 hours or participate selectively in sessions that interest you most.</p>
+        </div>
+    </section>
+
+    <!-- Global Timeline Section -->
+    <section id="timeline" class="py-5">
+        <div class="container text-center">
+            <h2>Global Timeline</h2>
+            <p class="mt-3">
+                Participate across time zones with a schedule tailored for a global audience. <br/>The chart below show how
+                8 hour periods could overlap across regions.
+            </p>
+            <div id="gantt-chart" class="mt-4"></div>
+        </div>
+    </section>
+
+    <!-- Call for Speakers Section -->
+    <section id="speakers" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Call for Speakers</h2>
+            <p class="mt-3">
+                Invitations for invited speakers will be distributed shortly! A general submission window will open
+                in the coming months. Sign up above to receive updates.
+            </p>
+            <button class="btn btn-primary btn-lg mt-3" id="notifyMe">Notify Me When Submissions Open</button>
+        </div>
+    </section>
+
+    <!-- Call for Chairs Section -->
+    <section id="chairs" class="py-5">
+        <div class="container text-center">
+            <h2>Call for Chairs</h2>
+            <p class="mt-3">
+                During registration for the meeting, you will be able to volunteer to chair for any amount of time.
+                We will need volunteers from all regions to help us cover the full 24h of the symposium.
+            </p>
+        </div>
+    </section>
+
+    <!-- Organizing Team Section -->
+    <section id="organizing-team" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Organizing Team</h2>
+            <p class="mt-3"><em>* alphabetical order *</em></p>
+            <ul class="list-unstyled mt-3">
+                <li>Peter Beaucage - NIST</li>
+                <li>Tanny Andrea Chavez Esparza - LBL</li>
+                <li>Alexander Hexemer - LBL</li>
+                <li>Tyler Martin - NIST</li>
+                <li>Peter Müller-Buschbaum - TUM, FRM-II</li>
+                <li>Stephan Roth - KTH, DESY</li>
+                <li>Xiaoping Wang - ORNL</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p>Contact us: <a href="mailto:tyler.martin@nist.gov" class="text-light">tyler.martin@nist.gov</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
