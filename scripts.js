@@ -1,7 +1,3 @@
-// Event handlers for buttons
-document.getElementById('saveDate').onclick = () => alert('This will share a .ics file with the selected date.');
-document.getElementById('notifyMe').onclick = () => alert('This will link to a Google Form to sign up for notifications.');
-
 document.addEventListener('DOMContentLoaded', function() {
     const data = [
         {

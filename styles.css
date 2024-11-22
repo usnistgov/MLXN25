@@ -56,7 +56,7 @@ button {
 
 #gantt-chart {
     margin: 0 auto;
-    max-width: 100%; /* Make the chart responsive */
+    max-width: 900px; /* Make the chart responsive */
 }
 
 /* Responsive adjustments */
