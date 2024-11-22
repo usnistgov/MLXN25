@@ -1,5 +1,4 @@
 /* Hero Section */
-
 .hero {
     position: relative;
     background: url('header-image.png') no-repeat center center/cover;
@@ -8,21 +7,23 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
 }
 
 .hero .container {
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
+    width: 100%;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 2em;
     margin: 0;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 10px 0 20px;
 }
 
@@ -55,6 +56,30 @@ button {
 
 #gantt-chart {
     margin: 0 auto;
-    max-width: 800px; /* Adjust the width as needed */
+    max-width: 100%; /* Make the chart responsive */
 }
 
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .btn-primary, .btn-secondary {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
