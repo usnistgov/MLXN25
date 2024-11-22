@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     };
     const config = {
-        displayModeBar: true,
+        displayModeBar: false,
         responsive: true
     };
 
