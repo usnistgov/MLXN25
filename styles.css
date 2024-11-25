@@ -25,6 +25,12 @@
 .hero p {
     font-size: 1em;
     margin: 10px 0 20px;
+    max-width: none;
+}
+
+p {
+    max-width: 750px;
+    margin: 0 auto;
 }
 
 /* Buttons */
