@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             Task: 'America/Pacific',
-            Start: '2025-04-15 18:00:00',
+            Start: '2025-04-15 19:00:00',
             Finish: '2025-04-16 03:00:00',
             Color: 'green',
         },
