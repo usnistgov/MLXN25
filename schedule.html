@@ -369,8 +369,8 @@
                                 eventTags += '<span class="badge bg-info me-1">Contributed</span>';
                                 eventLength = '10 minutes + 5 minutes for questions';
                             }
-                            if (data.talktype === 'Demo') {
-                                eventTags += '<span class="badge bg-info me-1">Demo</span>';
+                            if (data.talktype === 'Demo' || data.talktype === 'Tutorial') {
+                                eventTags += '<span class="badge bg-info me-1">Demo/Tutorial</span>';
                                 eventLength = '60 minutes';
                             }
                             if (data.talktype === 'Discussion') {
