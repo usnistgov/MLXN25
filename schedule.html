@@ -110,6 +110,7 @@
                                 <p><strong>Affiliation:</strong> <span id="eventAffiliation"></span></p>
                                 <p><strong>UTC Time:</strong> <span id="eventUtcTime"></span></p>
                                 <p><strong>Your Time:</strong> <span id="eventLocalTime"></span></p>
+                                <p><strong>Event Length:</strong> <span id="eventLength"></span></p>
                                 <div class="mt-3">
                                     <h5>Abstract</h5>
                                     <p id="eventAbstract"></p>
@@ -355,20 +356,26 @@
                             $('#eventUtcTime').text(data.utcDateTime);
                             $('#eventLocalTime').text(data.localDateTime);
                             $('#eventAbstract').text(data.abstract || 'No abstract available');
-                            
+
+
                             // Update regions display
                             let eventTags = '';
+                            let eventLength = 'Unknown';
                             if (data.talktype === 'Invited') {
                                 eventTags += '<span class="badge bg-info me-1">Invited</span>';
+                                eventLength = '20 minutes + 10 minutes for questions';
                             }
                             if (data.talktype === 'Contributed') {
                                 eventTags += '<span class="badge bg-info me-1">Contributed</span>';
+                                eventLength = '10 minutes + 5 minutes for questions';
                             }
                             if (data.talktype === 'Demo') {
                                 eventTags += '<span class="badge bg-info me-1">Demo</span>';
+                                eventLength = '60 minutes';
                             }
                             if (data.talktype === 'Discussion') {
                                 eventTags += '<span class="badge bg-info me-1">Discussion</span>';
+                                eventLength = '30 minutes';
                             }
                             if (data.regions.europe) {
                                 eventTags += '<span class="badge bg-primary me-1">Central Europe</span>';
@@ -384,6 +391,7 @@
                             }
 
                             $('#eventTags').html(eventTags);
+                            $('#eventLength').text(eventLength);
                             
                             // Show details card
                             $('#eventDetails').addClass('show');
