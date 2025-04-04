@@ -118,29 +118,6 @@ button {
  .event-details-card.show {
      display: block;
  }
- .region-indicator {
-     display: inline-block;
-     width: 12px;
-     height: 12px;
-     margin-right: 3px;
-     border-radius: 2px;
- }
- .region-europe {
-     background-color: #1f77b4;
- }
- .region-eastern {
-     background-color: #ff7f0e;
- }
- .region-western {
-     background-color: #2ca02c;
- }
- .region-asia {
-     background-color: #d62728;
- }
- .region-indicators {
-     display: flex;
-     margin-right: 10px;
- }
  .time-cell {
      display: flex;
      align-items: center;
@@ -158,3 +135,140 @@ button {
      font-size: 0.85em;
      margin-top: 2px;
  }
+
+#scheduleTable {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#scheduleTable thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 12px 15px;
+    font-weight: 600;
+}
+
+#scheduleTable tbody tr {
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+#scheduleTable tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+    border-left: 3px solid #0d6efd;
+}
+
+#scheduleTable tbody tr.active {
+    background-color: rgba(13, 110, 253, 0.1);
+    border-left: 3px solid #0d6efd;
+}
+
+#scheduleTable td {
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Region indicators */
+.region-indicators {
+    display: flex;
+    gap: 5px;
+}
+
+.region-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 2px;
+}
+
+ .region-europe {
+     background-color: #1f77b4;
+ }
+ .region-eastern {
+     background-color: #ff7f0e;
+ }
+ .region-western {
+     background-color: #2ca02c;
+ }
+ .region-asia {
+     background-color: #d62728;
+ }
+
+
+/* Event details styling */
+.event-details-card {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.event-details-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#eventTags .badge {
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+#eventTitle {
+    font-weight: 600;
+    line-height: 1.3;
+    font-size: 1.4rem;
+}
+
+.schedule-container {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Alert styling */
+.alert {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
