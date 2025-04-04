@@ -8,7 +8,7 @@ x,,,,4/15/25,13:15,Benedikt Sochor,,,,Invited
 x,,,,4/15/25,13:30,,,,,
 x,,,,4/15/25,13:45,Thorsten Hellert,Lawrence Berkeley National Laboratory ,Developing specialized text embedding models for (accelerator-)physics,"The specialized terminology and complex concepts inherent in physics present significant challenges for Natural Language Processing (NLP), particularly when relying on general-purpose models. In this talk, I will discuss the development of physics-specific text embedding models designed to overcome these obstacles, beginning with PhysBERT—the first model pre-trained exclusively on a curated corpus of 1.2 million arXiv physics papers. Building upon this foundation, we turn our attention to accelerator physics, a subfield with even more intricate language and concepts. To effectively capture the nuances of this domain, we developed AccPhysBERT, a sentence embedding model fine-tuned specifically for accelerator physics literature. A key aspect of this development involved leveraging Large Language Models (LLMs) extensively to generate annotated training data, enabling AccPhysBERT to facilitate advanced NLP applications such as semantic paper-reviewer matching and integration into Retrieval-Augmented Generation systems.",Invited
 x,,,,4/15/25,14:00,,,,,
-x,,,,4/15/25,14:15,Break,,,,
+x,,,,4/15/25,14:15,,,,,
 x,,,,4/15/25,14:30,,,,,
 x,,,,4/15/25,14:45,,,,,
 x,x,,,4/15/25,15:00,Julian Heger,Technical University of Munich,Bringing Clarity to Complexity: Machine Learning-Supported Insight into Biohybrid Film Formation in Real Time with GISAXS,,Invited
