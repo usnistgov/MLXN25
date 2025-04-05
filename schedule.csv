@@ -71,7 +71,7 @@ x,x,,,4/15/25,17:00,Phil Maffetone,Brookhaven National Laboratory,Human-in-the-L
 ,,,x,4/16/25,5:15,,,,,
 ,,,x,4/16/25,5:30,,,,,
 ,,,x,4/16/25,5:45,,,,,
-,,,x,4/16/25,6:00,,,,,
+,,,x,4/16/25,6:00,Masashi Ishii,SPring-8,MDR XAFS DB: X-ray absorption data integration for meta-spectral analysis,"MDR XAFS DB is a data integration infrastructure created to share XAFS spectra widely, with data provided by six organizations in Japan. In order to operate the data in accordance with the FAIR principles, the following efforts have been made: (1) Machine-readable structured metadata is attached to all spectra. (2) Cross-sectional searches are made possible by normalizing the material vocabulary using a dictionary. (3) In order to permanently retain and discover data, DOIs are attached to all spectra. (4) Machine-accessible APIs are developed and batch downloads are made possible. In this presentation, we introduce the details of the MDR XAFS DB and frontier research on materials informatics using it, and describe the current state of data-driven infrastructure and the scope for global data collaboration.",Tutorial
 ,,,x,4/16/25,6:15,,,,,
 ,,,x,4/16/25,6:30,,,,,
 ,,,x,4/16/25,6:45,,,,,
