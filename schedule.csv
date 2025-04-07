@@ -37,7 +37,13 @@ x,x,,,4/15/25,17:00,Phil Maffetone,Brookhaven National Laboratory,Human-in-the-L
 ,x,x,,4/15/25,19:15,,,,,
 ,x,x,,4/15/25,19:30,,,,,
 ,x,x,,4/15/25,19:45,,,,,
-,x,x,,4/15/25,20:00,Maria K. Chan,Argonne National Laboratory,,,Invited
+,x,x,,4/15/25,20:00,Maria K. Chan,Argonne National Laboratory,Data- and theory-informed approaches for accelerating the capture and interpretation of core-level spectra,"The use of advanced, including in situ and operando, core-level spectroscopy techniques has enabled detailed characterization of materials during synthesis and operations. Data-driven approaches, especially guided by computational spectroscopy, enable robust and accelerated information extraction from such spectroscopy data. In this talk, we discuss the featurization of x-ray absorption near edge structure (XANES) for extraction of local structure and electronic properties in battery cathode materials [1], and the extension thereof towards the detection of antisite defect and oxygen vacancy from multimodal EELS/XANES [2]. We also discuss the use of data-driven approaches to accelerate the acquisition [3] and analysis [4] of XANES mapping data. Finally, we discuss the use of AI to extract relevant labeled microscopy and spectroscopy data from scientific literature [5], and recent extensions involving the use of large language models and multi-model contrastive learning. 
+References:
+[1] Y. Chen, C. Chen, I. Hwang, M. J. Davis, W. Yang, C.J. Sun, G. Lee, D. McReynolds, D. Allan, J. M. Arias, S. P. Ong, and M. K. Y. Chan, “Robust Machine Learning Inference from X-ray Absorption Near Edge Spectra through Featurization,” Chemistry of Materials, 36, 5, 2304–2313 (2024).
+[2] H. Jia, Y. Chen, G. H. Lee, J. Smith, M. Chi, W. Yang, M. K. Y. Chan, “Revealing Local Structures through Machine-Learning-Fused Multimodal Spectroscopy,” arXiv preprint arXiv:2501.08919. 
+[3] S. Tetef, A. Pattammattel, Y. S. Chu, M. K. Y. Chan#, G. T. Seidler, “Accelerating nano-XANES imaging via feature selection,” Digital Discovery 3(1), 201-209 (2024). 
+[4] S. Tetef, A. Pattammattel, Y. S. Chu, M. K. Y. Chan#, G. T. Seidler, “Manifold Projection Image Segmentation for Nano-XANES Imaging,” APL Machine Learning 1, 046119 (2023). 
+[5] E. Schwenker, W. Jiang, T. Spreadbury, N. Ferrier, O. Cossairt, M. K. Y. Chan, “EXSCLAIM! -- Harnessing materials science literature for labeled microscopy datasets,” Patterns 4, 100843 (2023).Corresponding author information",Invited
 ,x,x,,4/15/25,20:15,,,,,
 ,x,x,,4/15/25,20:30,MLXN Organizers,,Discussion on Community Needs,,Discussion
 ,x,x,,4/15/25,20:45,,,,,
