@@ -11,7 +11,13 @@ x,,,,4/15/25,14:00,,,,,
 x,,,,4/15/25,14:15,,,,,
 x,,,,4/15/25,14:30,,,,,
 x,,,,4/15/25,14:45,,,,,
-x,x,,,4/15/25,15:00,Julian Heger,Technical University of Munich,Bringing Clarity to Complexity: Machine Learning-Supported Insight into Biohybrid Film Formation in Real Time with GISAXS,,Invited
+x,x,,,4/15/25,15:00,Julian Heger,Technical University of Munich,Bringing Clarity to Complexity: Machine Learning-Supported Insight into Biohybrid Film Formation in Real Time with GISAXS,"Grazing-incidence X-ray small-angle scattering (GISAXS) is a powerful tool to study the structure of nano- and mesoscale materials, such as thin films used in energy devices. Thanks to the high brilliance of synchrotron sources, GISAXS can capture the formation of these films in real time and test their stability during operation or varying environmental conditions. For example, GISAXS examines flexible substrates to understand how mechanical deformation affects optoelectronic coatings [1], and it monitors the low-temperature formation of titania films during sustainable, water-based spray deposition [2, 3].
+However, GISAXS has a major challenge: it loses phase information during measurement, which complicates the analysis needed to determine the sample's exact structure. In addition, typically large amount of data is acquired on short time scales. This problem makes the data analysis process both time-consuming and demanding, often requiring significant expertise. To overcome this, we have developed a machine learning approach that uses neural networks trained on synthetic data to analyze 2D GISAXS patterns in real time. Our goal is to provide an on-the-fly analysis during measurements at the synchrotron, making this powerful technique more accessible to a broader scientific community, including those without specialized experience in data interpretation.
+The talk presents our progress in using machine learning to support the analysis of time-resolved GISAXS data, with a focus on studying the formation of sustainable biohybrid films for energy materials.
+References:
+[1] J.E. Heger et al., Nanoscale Horiz. 8, 383-395 (2023)
+[2] J.E. Heger et al., Adv. Funct. Mater. 32, 2113080 (2022)
+[3] J.E. Heger et al., JACS Au (2025)",Invited
 x,x,,,4/15/25,15:15,,,,,
 x,x,,,4/15/25,15:30,,,,,
 x,x,,,4/15/25,15:45,,,,,
