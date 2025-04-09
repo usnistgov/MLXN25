@@ -29,6 +29,10 @@
          $('a[rel=external]').leaveNotice();
         });
     </script>
+
+    <!-- Add these libraries in the head section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body>
     <!-- Hero Section -->
@@ -86,11 +90,16 @@
                 <div class="card">
                     <div class="card-header">
                         <h2 class="mb-0">Schedule</h2>
-                        <div class="mt-2">
-                            <span class="region-indicator region-europe"></span> Central Europe
-                            <span class="region-indicator region-eastern ms-3"></span> America/Eastern
-                            <span class="region-indicator region-western ms-3"></span> America/Western
-                            <span class="region-indicator region-asia ms-3"></span> Asia/Pacific
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div>
+                                <span class="region-indicator region-europe"></span> Central Europe
+                                <span class="region-indicator region-eastern ms-3"></span> America/Eastern
+                                <span class="region-indicator region-western ms-3"></span> America/Western
+                                <span class="region-indicator region-asia ms-3"></span> Asia/Pacific
+                            </div>
+                            <button id="exportPdf" class="btn btn-primary">
+                                <i class="bi bi-file-pdf"></i> Export PDF Schedule
+                            </button>
                         </div>
                     </div>
                     <div class="card-body p-0">
@@ -433,6 +442,80 @@
                 }
             });
         });
+
+        // PDF Export functionality
+        document.getElementById('exportPdf').addEventListener('click', function() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF('l', 'mm', 'a4');
+            
+            // Get the table data
+            const tableData = $('#scheduleTable').DataTable().data().toArray();
+            
+            // Transform data for PDF
+            const pdfData = tableData.map(row => {
+                // Get talk length based on talk type
+                let talkLength = '';
+                if (row.talktype === 'Invited') {
+                    talkLength = ' (20+10 min)';
+                } else if (row.talktype === 'Contributed') {
+                    talkLength = ' (10+5 min)';
+                } else if (row.talktype === 'Demo' || row.talktype === 'Tutorial') {
+                    talkLength = ' (60 min)';
+                } else if (row.talktype === 'Discussion') {
+                    talkLength = ' (30 min)';
+                }
+                
+                return [
+                    row.utcDateTime,
+                    row.localDateTime,
+                    row.speaker,
+                    row.affiliation,
+                    row.title,
+                    row.talktype + talkLength,  // Combine talk type with length
+                    getRegions(row.regions),
+                    row.abstract
+                ];
+            });
+            
+            // Configure the table
+            doc.autoTable({
+                head: [['UTC Time', 'Local Time', 'Speaker', 'Affiliation', 'Title', 'Talk Type', 'Regions', 'Abstract']],
+                body: pdfData,
+                startY: 20,
+                headStyles: { fillColor: [41, 128, 185], textColor: 255 },
+                columnStyles: {
+                    0: { cellWidth: 25 },  // UTC Time column width
+                    1: { cellWidth: 25 },  // Local Time column width
+                    7: { cellWidth: 'auto', overflow: 'linebreak' }  // Abstract column
+                },
+                styles: { 
+                    overflow: 'linebreak',
+                    cellPadding: 2,
+                    fontSize: 8
+                },
+                margin: { top: 25 },
+                didDrawPage: function(data) {
+                    // Add header
+                    doc.setFontSize(15);
+                    doc.text('MLXN 2025 Symposium Schedule', 14, 15);
+                }
+            });
+            
+            // Open PDF in new tab instead of downloading
+            const pdfBlob = doc.output('blob');
+            const pdfUrl = URL.createObjectURL(pdfBlob);
+            window.open(pdfUrl, '_blank');
+        });
+        
+        // Helper function to format regions for PDF
+        function getRegions(regions) {
+            const regionNames = [];
+            if (regions.europe) regionNames.push('Central Europe');
+            if (regions.eastern) regionNames.push('America/Eastern');
+            if (regions.western) regionNames.push('America/Western');
+            if (regions.asia) regionNames.push('Asia/Pacific');
+            return regionNames.join(', ');
+        }
     </script>
 </body>
 </html> 
