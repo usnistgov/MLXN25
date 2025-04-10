@@ -410,6 +410,18 @@
                                 eventTags += '<span class="badge bg-info me-1">Discussion</span>';
                                 eventLength = '30 minutes';
                             }
+                            if (data.talktype === 'Break60') {
+                                eventTags += '<span class="badge bg-info me-1">Break</span>';
+                                eventLength = '60 minutes';
+                            }
+                            if (data.talktype === 'Break30') {
+                                eventTags += '<span class="badge bg-info me-1">Break</span>';
+                                eventLength = '30 minutes';
+                            }
+                            if (data.talktype === 'Break15') {
+                                eventTags += '<span class="badge bg-info me-1">Break</span>';
+                                eventLength = '15 minutes';
+                            }
                             if (data.regions.europe) {
                                 eventTags += '<span class="badge bg-primary me-1">Central Europe</span>';
                             }
