@@ -60,12 +60,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="schedule.html">Schedule</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="https://forms.gle/H5YNSt72dLBRPrXT7" rel="external">Meeting Registration</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://forms.gle/bDFXMEPGEKgv2yoD7" rel="external">Talk Submission</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -97,17 +97,17 @@
      </div> -->
 
     <div class="container-fluid py-4">
-        <div class="row">
+        <div class="row g-4">
             <div class="col-lg-7">
                 <div class="card">
                     <div class="card-header">
                         <h2 class="mb-0">Schedule</h2>
                         <div class="d-flex justify-content-between align-items-center mt-2">
                             <div>
-                                <span class="region-indicator region-europe"></span> Central Europe
-                                <span class="region-indicator region-eastern ms-3"></span> America/Eastern
-                                <span class="region-indicator region-western ms-3"></span> America/Western
-                                <span class="region-indicator region-asia ms-3"></span> Asia/Pacific
+                                <span class="region-indicator region-europe"></span>&nbsp;Central Europe
+                                <span class="region-indicator region-eastern ms-3"></span>&nbsp;America/Eastern
+                                <span class="region-indicator region-western ms-3"></span>&nbsp;America/Western
+                                <span class="region-indicator region-asia ms-3"></span>&nbsp;Asia/Pacific
                             </div>
                             <button id="exportPdf" class="btn btn-primary">
                                 <i class="bi bi-file-pdf"></i> Export PDF Schedule
@@ -136,33 +136,35 @@
             <div class="col-lg-5">
                 <div class="event-details">
                     <div class="card">
-                        <div class="card-header">
+                        <div class="card-header sticky-top bg-white">
                             <h3 class="mb-0">Event Details</h3>
                         </div>
-                        <div class="card-body">
-                            <div id="eventDetails" class="event-details-card">
-                                <h4 id="eventTitle" class="mb-3"></h4>
-                                <div id="eventTags" class="mb-3"></div>
-                                
-                                <div class="row mb-4"> 
-                                    <p class="mb-2"><i class="bi bi-person-fill me-2"></i><strong>Speaker:</strong> <span id="eventSpeaker"></span></p>
-                                    <p class="mb-2"><i class="bi bi-building me-2"></i><strong>Affiliation:</strong> <span id="eventAffiliation"></span></p>
-                                    <p class="mb-2"><i class="bi bi-clock me-2"></i><strong>UTC Time:</strong> <span id="eventUtcTime"></span></p>
-                                    <p class="mb-2"><i class="bi bi-geo-alt me-2"></i><strong>Your Time:</strong> <span id="eventLocalTime"></span></p>
-                                    <p class="mb-2"><i class="bi bi-hourglass-split me-2"></i><strong>Event Length:</strong> <span id="eventLength"></span></p>
+                        <div class="card-body p-0">
+                            <div class="event-details-scroll">
+                                <div id="eventDetails" class="event-details-card p-4">
+                                    <h4 id="eventTitle" class="mb-3"></h4>
+                                    <div id="eventTags" class="mb-3"></div>
+                                    
+                                    <div class="row mb-4"> 
+                                        <p class="mb-2"><i class="bi bi-person-fill me-2"></i><strong>Speaker:</strong> <span id="eventSpeaker"></span></p>
+                                        <p class="mb-2"><i class="bi bi-building me-2"></i><strong>Affiliation:</strong> <span id="eventAffiliation"></span></p>
+                                        <p class="mb-2"><i class="bi bi-clock me-2"></i><strong>UTC Time:</strong> <span id="eventUtcTime"></span></p>
+                                        <p class="mb-2"><i class="bi bi-geo-alt me-2"></i><strong>Your Time:</strong> <span id="eventLocalTime"></span></p>
+                                        <p class="mb-2"><i class="bi bi-hourglass-split me-2"></i><strong>Event Length:</strong> <span id="eventLength"></span></p>
+                                    </div>
+                                    
+                                    <div class="abstract-section p-3 bg-light rounded">
+                                        <h5 class="border-bottom pb-2 mb-3">Abstract</h5>
+                                        <p id="eventAbstract" class="mb-0"></p>
+                                    </div>
                                 </div>
-                                
-                                <div class="abstract-section p-3 bg-light rounded">
-                                    <h5 class="border-bottom pb-2 mb-3">Abstract</h5>
-                                    <p id="eventAbstract" class="mb-0"></p>
+                                <div id="noEventSelected" class="text-center text-muted py-5 p-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-calendar-event mb-3" viewBox="0 0 16 16">
+                                        <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                    </svg>
+                                    <p class="mb-0">Select an event to view details</p>
                                 </div>
-                            </div>
-                            <div id="noEventSelected" class="text-center text-muted py-5">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-calendar-event mb-3" viewBox="0 0 16 16">
-                                    <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
-                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                                </svg>
-                                <p class="mb-0">Select an event to view details</p>
                             </div>
                         </div>
                     </div>
@@ -385,15 +387,31 @@
                         scrollCollapse: true,
                         paging: false,
                         info: false,
+                        responsive: true, // Enable responsive behavior
                         createdRow: function(row, data, index) {
                             $(row).addClass('event-row');
                         }
+                    });
+                    
+                    // Make sure table stays responsive on window resize
+                    $(window).on('resize', function() {
+                        // Adjust the scroll container height for mobile vs desktop
+                        if ($(window).width() <= 576) {
+                            table.scrollY('40vh');
+                        } else {
+                            table.scrollY('70vh');
+                        }
+                        table.draw();
                     });
                     
                     // Handle row click
                     $('#scheduleTable tbody').on('click', 'tr', function() {
                         const data = table.row(this).data();
                         if (data) {
+                            // Highlight the row
+                            $(this).siblings().removeClass('active');
+                            $(this).addClass('active');
+
                             // Update event details
                             $('#eventTitle').text(data.title || 'No Title');
                             $('#eventSpeaker').text(data.speaker || 'Not specified');
@@ -401,7 +419,6 @@
                             $('#eventUtcTime').text(data.utcDateTime);
                             $('#eventLocalTime').text(data.localDateTime);
                             $('#eventAbstract').text(data.abstract || 'No abstract available');
-
 
                             // Update regions display
                             let eventTags = '';
@@ -454,9 +471,15 @@
                             $('#eventDetails').addClass('show');
                             $('#noEventSelected').hide();
                             
-                            // Update row styling
-                            $(this).siblings().removeClass('active');
-                            $(this).addClass('active');
+                            // On mobile, scroll to the details section
+                            if ($(window).width() <= 576) {
+                                $('html, body').animate({
+                                    scrollTop: $('.event-details').offset().top - 10
+                                }, 300);
+                                
+                                // Also scroll the details panel to the top
+                                $('.event-details-scroll').scrollTop(0);
+                            }
                         }
                     });
                 },

@@ -90,51 +90,111 @@ button {
     .container {
         padding: 10px;
     }
+    
+    /* Improved mobile schedule layout */
+    .schedule-container {
+        height: 50vh; /* Reduce height on mobile for better usability */
+        margin-bottom: 20px; /* Add spacing between table and details pane */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+    
+    .event-details {
+        height: auto; /* Let it take natural height on mobile */
+        max-height: 75vh; /* Limit maximum height but give more space */
+        margin-top: 30px; /* Add more spacing from the table */
+    }
+    
+    .event-details-scroll {
+        max-height: calc(50vh - 56px); /* Adjust for mobile */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+    
+    #scheduleTable td {
+        padding: 10px 8px; /* Reduce padding on mobile for more content space */
+    }
+    
+    /* Make table more touch-friendly */
+    .event-row {
+        padding: 12px 0;
+    }
+    
+    /* Improve visibility of active row on mobile */
+    #scheduleTable tbody tr.active {
+        background-color: rgba(13, 110, 253, 0.2); /* More visible highlight */
+    }
+    
+    /* Fix for PDF export button and region indicators on mobile */
+    .card-header .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    #exportPdf {
+        margin-top: 12px;
+        align-self: flex-start;
+    }
+    
+    /* Region indicators spacing on mobile */
+    .region-indicator + span {
+        white-space: nowrap;
+    }
+    
+    #scheduleTable tbody tr {
+        min-height: 50px; /* Ensure touch targets are large enough */
+    }
 }
 
- .schedule-container {
-     height: 80vh;
-     overflow-y: auto;
- }
- .event-details {
-     position: sticky;
-     top: 0;
-     height: 80vh;
-     overflow-y: auto;
- }
- .event-row {
-     cursor: pointer;
-     transition: background-color 0.2s;
- }
- .event-row:hover {
-     background-color: #f8f9fa;
- }
- .event-row.active {
-     background-color: #e9ecef;
- }
- .event-details-card {
-     display: none;
- }
- .event-details-card.show {
-     display: block;
- }
- .time-cell {
-     display: flex;
-     align-items: center;
- }
- .combined-time {
-     white-space: nowrap;
- }
- .utc-time {
-     display: block;
-     font-weight: bold;
- }
- .local-time {
-     display: block;
-     color: #666;
-     font-size: 0.85em;
-     margin-top: 2px;
- }
+.schedule-container {
+    height: 80vh;
+    overflow-y: auto;
+}
+.event-details {
+    position: sticky;
+    top: 0;
+    height: 80vh;
+}
+.event-details .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.event-details-scroll {
+    overflow-y: auto;
+    max-height: calc(80vh - 56px); /* Subtract the header height */
+}
+.event-row {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.event-row:hover {
+    background-color: #f8f9fa;
+}
+.event-row.active {
+    background-color: #e9ecef;
+}
+.event-details-card {
+    display: none;
+}
+.event-details-card.show {
+    display: block;
+}
+.time-cell {
+    display: flex;
+    align-items: center;
+}
+.combined-time {
+    white-space: nowrap;
+}
+.utc-time {
+    display: block;
+    font-weight: bold;
+}
+.local-time {
+    display: block;
+    color: #666;
+    font-size: 0.85em;
+    margin-top: 2px;
+}
 
 #scheduleTable {
     border-collapse: separate;
@@ -199,22 +259,21 @@ button {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    margin-right: 2px;
+    margin-right: 5px; /* Increased spacing */
 }
 
- .region-europe {
-     background-color: #1f77b4;
- }
- .region-eastern {
-     background-color: #ff7f0e;
- }
- .region-western {
-     background-color: #2ca02c;
- }
- .region-asia {
-     background-color: #d62728;
- }
-
+.region-europe {
+    background-color: #1f77b4;
+}
+.region-eastern {
+    background-color: #ff7f0e;
+}
+.region-western {
+    background-color: #2ca02c;
+}
+.region-asia {
+    background-color: #d62728;
+}
 
 /* Event details styling */
 .event-details-card {
