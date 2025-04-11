@@ -4,7 +4,7 @@ x,,,,4/15/25,12:15,Marina Ganeva,Jülich Centre for Neutron Science,AI-assisted 
 x,,,,4/15/25,12:30,,,,,
 x,,,,4/15/25,12:45,Tim Snow,Diamond Light Source,Nuts and Bolts: Infrastructure Platforms for Different Latency Regimes,"Each application of an AI or ML algorithm may seem unique, however, to sustain these in the long run there has to be some commonality as to how they are deployed and maintained. This talk investigates Diamond's (and to a lesser extent other facilities) approaches to this challenge, illustrating how solutions have been developed and tool chained with respect to latency. From very low latency, i.e. nano- to micro-seconds, to accepted latency, i.e. a known number of milliseconds, through to latency is acceptable, i.e. seconds onwards. I hope for a robust discussion after the main presentation!",Invited
 x,,,,4/15/25,13:00,,,,,
-x,,,,4/15/25,13:15,Benedikt Sochor,DESY,,,Demo
+x,,,,4/15/25,13:15,Benedikt Sochor,DESY,Demo Presentation,,Demo
 x,,,,4/15/25,13:30,,,,,
 x,,,,4/15/25,13:45,,,,,
 x,,,,4/15/25,14:00,,,,,
